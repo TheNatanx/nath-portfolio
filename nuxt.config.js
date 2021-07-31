@@ -41,8 +41,31 @@ export default {
     // Modules: https://go.nuxtjs.dev/config-modules
     modules: [
     // https://go.nuxtjs.dev/pwa
-        "@nuxtjs/pwa"
+        "@nuxtjs/pwa",
+        "nuxt-i18n"
     ],
+
+    // i18n module configuration https://i18n.nuxtjs.org/setup
+    i18n: {
+        defaultLocale: "en",
+        locales: [
+            {
+                code: "fr",
+                name: "Français",
+                iso: "fr-FR",
+                file: "fr-FR.js",
+                img: "/flags/france-flag.png"
+            },
+            {
+                code: "en",
+                name: "English",
+                iso: "en-US",
+                file: "en-US.js",
+                img: "/flags/usa-flag.png"
+            }
+        ],
+        langDir: "~/lang/"
+    },
 
     // PWA module configuration: https://go.nuxtjs.dev/pwa
     pwa: {

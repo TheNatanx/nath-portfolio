@@ -1,5 +1,7 @@
 <template>
-    <div>
-        Welcome to my portfolio
-    </div>
+    <v-app>
+        <p>
+            {{ $t("test") }}
+        </p>
+    </v-app>
 </template>
