@@ -1,20 +1,21 @@
 <template>
     <v-app-bar
+        app
         dense
         flat
     >
         <v-menu
-            top
+            bottom
+            :offset-y="true"
             :close-on-click="true"
         >
             <template #activator="{ on, attrs }">
-                <v-btn
-                    color="primary"
-                    dark
-                    v-bind="attrs"
-                    v-on="on"
-                >
-                    Dropdown
+                <v-btn depressed elevation="0" v-bind="attrs" v-on="on">
+                    <v-img
+                        max-height="32"
+                        max-width="32"
+                        :src="currentLocale.img"
+                    />
                 </v-btn>
             </template>
 
@@ -48,6 +49,9 @@ export default {
     computed: {
         availableLocales () {
             return this.$i18n.locales
+        },
+        currentLocale () {
+            return (this.$i18n.locales.filter(locale => locale.code === this.$i18n.locale))[0]
         }
     }
 }

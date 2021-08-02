@@ -1,5 +1,6 @@
 <template>
     <v-footer
+        app
         dense
         flat
     >

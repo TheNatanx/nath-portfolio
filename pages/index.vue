@@ -1,7 +1,5 @@
 <template>
-    <v-app>
-        <p>
-            {{ $t("test") }}
-        </p>
-    </v-app>
+    <div>
+        {{ $t("test") }}
+    </div>
 </template>
